@@ -736,3 +736,11 @@ type fontInfoType struct {
 	Size1, Size2       uint32
 	Desc               FontDescType
 }
+
+func (pdf *Fpdf) GetFontDef() fontDefType {
+	return pdf.currentFont
+}
+
+func (pdf *Fpdf) GetCMargin() float64 {
+	return pdf.cMargin
+}
